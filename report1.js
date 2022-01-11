@@ -86,6 +86,7 @@ define(["text!./report.css", "jquery", "http://d3js.org/d3.v4.min.js"], function
                     };
         alert("Invoking WML Model...");
         $.post("https://myapp.us-east.cf.appdomain.cloud/predictScore", inputData, function(data) {
+            alert('inside $.post')
             var predictedOutput = data[13];
             $(".right").show();
             $("#score").val(Math.round(Number(predictedOutput[0]*100)));
