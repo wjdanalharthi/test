@@ -85,6 +85,7 @@ define(["text!./report.css", "jquery", "http://d3js.org/d3.v4.min.js"], function
                         "monthly_charge": $("#monthly_charge").val()
                     };
         alert("Invoking WML Model...");
+        alert(inputData);
         $.post("https://myapp.us-east.cf.appdomain.cloud/predictScore", inputData, function(data) {
             alert('inside $.post');
             var predictedOutput = data[13];
